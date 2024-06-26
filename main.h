@@ -9,5 +9,7 @@ struct specifier
 
 int _printf (const char *format, ...);
 int (*get_spec_func(char *s))(va_list args);
+int _strcmp(char *s1, char *s2);
 
 #endif
+
