@@ -11,7 +11,7 @@
  * percent sign and passed to this function
  * Return: Always 0 (success)
 */
-int (*get_spec_func(char s))(va_list args)
+void (*get_spec_func(char s))(va_list args)
 {
 	spec_t specs[] = {
 		{'c', print_character},

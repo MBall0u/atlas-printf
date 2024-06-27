@@ -15,7 +15,7 @@
 */
 int _printf(const char *format, ...)
 {
-	int (*print_func)(va_list);
+	void (*print_func)(va_list);
 
 	va_list(args);
 

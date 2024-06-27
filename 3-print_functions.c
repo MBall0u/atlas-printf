@@ -7,13 +7,11 @@
  * Description - initializes a pointer to a character, then prints it out
  * Return: Always 0 (success)
 */
-int print_character(va_list args)
+void print_character(va_list args)
 {
 	char character = va_arg(args, int);
 
 	putchar(character);	
-
-	return(0);
 }
 /**
  * print_string - prints a string of characters
@@ -21,7 +19,7 @@ int print_character(va_list args)
  * and prints it out
  * Return: Always 0 (success)
 */
-int print_string(va_list args)
+void print_string(va_list args)
 {
 	int c = 0;
 	char *str = va_arg(args, char *);
@@ -31,20 +29,15 @@ int print_string(va_list args)
 		putchar(str[c]);
 		c++;
 	}
-	return (0);
 }
 /**
  * print_percent - prints the % sign
  * Description - prints '%'
  * Return: Always 0 (success)
 */
-int print_percent(va_list args)
+void print_percent(va_list args __attribute__ ((unused)))
 {
-	char character = va_arg(args, int);
-
-	putchar(character);	
-
-	return(0);
+	putchar('%');	
 }
 /**
  * print_decimal - 
