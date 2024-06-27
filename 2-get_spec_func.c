@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <stdarg.h>
 #include "main.h"
 /**
  * get_spec_func - pointer function to the format specifiers functions
