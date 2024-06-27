@@ -16,6 +16,7 @@ void (*get_spec_func(char s))(va_list args)
 	spec_t specs[] = {
 		{'c', print_character},
 		{'s', print_string},
+		{'%', print_percent},
 	};
 	int i = 0;
 
