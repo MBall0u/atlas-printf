@@ -9,9 +9,9 @@
 */
 int print_character(va_list args)
 {
-	char character = va_arg(args, char *);
+	char character = va_arg(args, char);
 
-	putchar('character');	
+	putchar(character);	
 
 	return(0);
 }
@@ -40,9 +40,9 @@ int print_string(va_list args)
 */
 int print_percent(va_list args)
 {
-	char character = va_arg(args, char *);
+	char character = va_arg(args, char);
 
-	putchar('character');	
+	putchar(character);	
 
 	return(0);
 }

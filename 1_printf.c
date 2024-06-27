@@ -15,6 +15,8 @@
 */
 int _printf(const char *format, ...)
 {
+	int (*print_func)(va_list;)
+
 	va_list(args);
 
 	va_start(args, format);
@@ -24,7 +26,23 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			get_spec_func((char)*format)(args);
+			if (*format == '%')
+			{
+				putchar(*format);
+			}
+			else
+			{
+				print_func = get_spec_func(*format);
+
+				if (print_func != NULL)
+				{
+					print_func(args);
+				}
+				else
+				{
+					return (1);
+				}
+			}
 		}
 		else
 		{

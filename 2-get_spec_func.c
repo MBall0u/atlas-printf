@@ -16,11 +16,10 @@ int (*get_spec_func(char s))(va_list args)
 	spec_t specs[] = {
 		{'c', print_character},
 		{'s', print_string},
-		{'%', print_percent},
 	};
 	int i = 0;
 
-	while (i < 3)
+	while (i < 2)
 	{
 		if (specs[i].spec == s)
 		{
