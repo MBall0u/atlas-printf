@@ -19,18 +19,19 @@ int _printf(const char *format, ...)
 
 	va_start(args, format);
 
-	for (i = 0; format[i] != '\0'; i++)
+	while (*format != '\0')
 	{
-		if (format[i] == "%")
+		if (*format == '%')
 		{
-			i++;
-			get_spec_func(format[i])(va_list);
+			format++;
+			get_spec_func(*format)(args);
 		}
 		else
 		{
-			putchar(format[i]);
+			putchar(*format);
 		}
+		format++;
 	}
 	va_end(args);
-	return (0)
+	return (0);
 }

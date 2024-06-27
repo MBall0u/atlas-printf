@@ -10,23 +10,23 @@
  * percent sign and passed to this function
  * Return: Always 0 (success)
 */
-int (*get_spec_func(char *s))(va_list args)
+int (*get_spec_func(char s))(va_list args)
 {
 	spec_t specs[] = {
-		{"c", print_character},
-		{"s", print_string},
-		{"%", print_percent},
+		{'c', print_character},
+		{'s', print_string},
+		{'%', print_percent},
 		{NULL, NULL}
 	};
 	int i = 0;
 
 	while (i < 3)
 	{
-		if ((_strcmp(specs[i].spec, s)) == 0)
+		if (specs[i].spec == 0)
 		{
 			return (specs[i].f);
 		}
-		
+		i++;
 	}
 	return (NULL);
 }
