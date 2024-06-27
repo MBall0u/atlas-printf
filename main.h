@@ -9,7 +9,7 @@
 */
 typedef struct specifier
 {
-	char *spec;
+	char spec;
 	void (*f)(va_list);
 } spec_t;
 
