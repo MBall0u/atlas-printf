@@ -11,7 +11,7 @@
  * percent sign and passed to this function
  * Return: Always 0 (success)
 */
-int (*get_spec_func(char s))(args)
+int (*get_spec_func(char s))(va_list args)
 {
 	spec_t specs[] = {
 		{'c', print_character},
@@ -22,7 +22,7 @@ int (*get_spec_func(char s))(args)
 
 	while (i < 3)
 	{
-		if (specs[i].spec == 0)
+		if (specs[i].spec == s)
 		{
 			return (specs[i].f);
 		}
