@@ -31,7 +31,7 @@ void print_string(va_list args)
 }
 /**
  * print_percent - prints the % sign
- * Description - initializes a pointer to the % sign and prints it out
+ * Description - prints '%'
  * Return: Always 0 (success)
 */
 void print_percent(va_list args)
