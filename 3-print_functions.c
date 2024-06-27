@@ -2,13 +2,20 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_character - 
- * Description - 
+ * print_character - prints a character
+ * Description - initializes a pointer to a character, then prints it out
  * Return: Always 0 (success)
 */
 void print_character(va_list args)
 {
-
+	int c = 0;
+	char *character = va_arg(args, char);
+	
+		while (character[c] != '\0')
+		{
+			putchar(character[0]);
+			c++;
+		}
 }
 /**
  * print_string - prints a string of characters
@@ -28,13 +35,13 @@ void print_string(va_list args)
 	}
 }
 /**
- * print_percent - 
- * Description - 
+ * print_percent - prints the % sign
+ * Description - initializes a pointer to the % sign and prints it out
  * Return: Always 0 (success)
 */
 void print_percent(va_list args)
 {
-
+	putchar ('%');
 }
 /**
  * print_decimal - 
