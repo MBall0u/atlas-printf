@@ -15,7 +15,6 @@
 */
 int _printf(const char *format, ...)
 {
-	int i;
 	va_list(args);
 
 	va_start(args, format);
@@ -25,7 +24,7 @@ int _printf(const char *format, ...)
 		if (*format == '%')
 		{
 			format++;
-			get_spec_func(*format)(args);
+			get_spec_func((char)*format)(args);
 		}
 		else
 		{
