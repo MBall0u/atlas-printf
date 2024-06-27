@@ -8,14 +8,9 @@
 */
 void print_character(va_list args)
 {
-	int c = 0;
-	char *character = va_arg(args, char);
-	
-		while (character[c] != '\0')
-		{
-			putchar(character[0]);
-			c++;
-		}
+	char *character = va_arg(args, char *);
+
+	putchar(character);	
 }
 /**
  * print_string - prints a string of characters
