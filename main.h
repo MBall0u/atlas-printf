@@ -14,7 +14,7 @@ typedef struct specifier
 } spec_t;
 
 int _printf(const char *format, ...);
-void (*get_spec_func(char *s))(va_list args);
+void (*get_spec_func(char s))(va_list args);
 void print_character(va_list args);
 void print_string(va_list args);
 void print_percent(va_list args);
