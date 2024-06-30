@@ -20,11 +20,9 @@ int _printf(const char *format, ...)
 	int per_count = 0, res = 0, i = 0;
 	void (*print_func)(va_list args);
 
-	va_list(args);
-	va_list(copiedargs);
-	va_copy(copiedargs, args);
+	va_list(args), (copiedargs);
 	va_start(args, format);
-	va_start(copiedargs, format);
+	va_copy(copiedargs, args);
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
