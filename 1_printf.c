@@ -6,18 +6,18 @@
  * _printf - This is a homebrew version of standard libraries printf
  * Description - This function takes a formatted string as input as well as
  * an unknown amount of variables. It starts iterating through the string until
- * it hits a format specifier which then passes the next character into a function
- * that finds the proper formatting to print the inputted argument thus replacing
- * the format specifier in the string and then continues iterating until it hits
- * another format specifier or a null byte infinitely
+ * it hits a format specifier which then passes thenext character intoafunction
+ * that finds the proper formatting to print the inputted argument thus
+ * replacing the format specifier in the string and then continues iterating
+ * until it hits another format specifier/ null byte indefinetly.
  * @format: a formatted sting to be printed to standard output
  * Return: Always 0 (success)
 */
 int _printf(const char *format, ...)
 {
 	const char *temp_arg;
-    char temp_char;
-    int per_count = 0, res = 0, i = 0;
+	char temp_char;
+	int per_count = 0, res = 0, i = 0;
 	void (*print_func)(va_list args);
 
 	va_list(args);
@@ -72,9 +72,9 @@ int _printf(const char *format, ...)
 			else
 			{
 				i--;
-        		putchar(format[i]);
-            	i++;
-            	putchar(format[i]);
+				putchar(format[i]);
+				i++;
+				putchar(format[i]);
 			}
 		}
 		else
