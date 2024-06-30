@@ -5,7 +5,7 @@
 
 /**
  * struct specifier - struct specifier
- * 
+ *
  * @spec: the format specifier
  * @f: the function associated
 */

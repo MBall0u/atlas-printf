@@ -16,9 +16,9 @@ int char_counter(const char *str)
 	return (res);
 }
 /**
- * 
- * 
- * 
+ *
+ *
+ *
 */
 int single_count(char c __attribute__ ((unused)))
 {

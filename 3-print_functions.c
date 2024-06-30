@@ -52,7 +52,7 @@ void print_percent(va_list args __attribute__ ((unused)))
 	putchar('%');
 }
 /**
- * print_decimal - initializes a pointer to an array of ints and a decimal point
+ * print_decimal - initializes a pointer to an array of ints & a '.'
  * Description - prints a decimal number
  * Return: Void
 */
@@ -65,7 +65,7 @@ void print_decimal(va_list args)
 	{
 		putchar(dec[n]);
 		n++;
-	
+
 		if (dec[n] == '.')
 		{
 			putchar('.');
@@ -73,7 +73,7 @@ void print_decimal(va_list args)
 	}
 }
 /**
- * print_integer - initializes pointer to array of ints 
+ * print_integer - initializes pointer to array of ints
  * Description - prints an integer
  * Return: Void
 */
