@@ -5,6 +5,7 @@
 /**
  * print_character - prints a character
  * Description - initializes a pointer to a character, then prints it out
+ * @args: argument list being passed
  * Return: Void
 */
 void print_character(va_list args)
@@ -17,6 +18,7 @@ void print_character(va_list args)
  * print_string - prints a string of characters
  * Description - initializes a pointer to the passed argument
  * and prints it out
+ * @args: argument list being passed
  * Return: Void
 */
 void print_string(va_list args)
@@ -45,6 +47,7 @@ void print_string(va_list args)
 /**
  * print_percent - prints the % sign
  * Description - prints '%'
+ * @args: argument list being passed
  * Return: Void
 */
 void print_percent(va_list args __attribute__ ((unused)))
@@ -54,6 +57,7 @@ void print_percent(va_list args __attribute__ ((unused)))
 /**
  * print_decimal - initializes a pointer to an array of ints & a '.'
  * Description - prints a decimal number
+ * @args: argument list being passed
  * Return: Void
 */
 void print_decimal(va_list args)
@@ -75,6 +79,7 @@ void print_decimal(va_list args)
 /**
  * print_integer - initializes pointer to array of ints
  * Description - prints an integer
+ * @args: argument list being passed
  * Return: Void
 */
 void print_integer(va_list args)

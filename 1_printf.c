@@ -57,6 +57,8 @@ int _printf(const char *format, ...)
  * Description - this function is called by _printf and is utilized
  * for any format specifier that is s, c, or %
  * @c: the inputted character from the formatted string
+ * @copiedargs: the copied argument list being passed through
+ * @args: the original argument list being passed
  * Return: the character counter res
 */
 int char_func(const char c, va_list copiedargs, va_list args)

@@ -20,6 +20,7 @@ int char_counter(const char *str)
  * single_count - gets passed a single character argument
  * Description - just returns a value of positive one for
  * character counter.
+ * @c: unused variable
  * Return: Always 1 (success)
 */
 int single_count(char c __attribute__ ((unused)))
