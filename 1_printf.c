@@ -66,7 +66,8 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i] == '\0')
 			{
-				return ('\0');
+				i--;
+				continue;
 			}
 			else
 			{
