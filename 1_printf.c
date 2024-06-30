@@ -31,7 +31,7 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			if (format[i] != 's' && format[i] == 'c' && format[i] == '%')
+			if (format[i] == 's' || format[i] == 'c' || format[i] == '%')
 			{
 				per_count++;
 				if (format[i] == 's')
