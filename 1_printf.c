@@ -42,10 +42,14 @@ int _printf(const char *format, ...)
 				}
 				res += (char_counter(temp_arg));
 			}
-			if (format[i] == '%' || format[i] == 'c')
+			if (format[i] == 'c')
 			{
 				temp_char = va_arg(copiedargs, int);
 				res += single_count(temp_char);
+			}
+			if (format[i] == '%')
+			{
+				res += 1;
 			}
 			
 			print_func = get_spec_func(format[i]);
