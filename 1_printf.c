@@ -63,7 +63,7 @@ int char_func(const char c)
 {
 	const char *temp_arg;
 	char temp_char;
-	int res = 0,;
+	int res = 0;
 	void (*print_func)(va_list args);
 
 	if (c == 's')
@@ -85,7 +85,7 @@ int char_func(const char c)
 		res += 1;
 	}
 
-	print_func = get_spec_func(format[i]);
+	print_func = get_spec_func(c);
 
 	if (print_func != NULL)
 	{
