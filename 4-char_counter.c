@@ -3,14 +3,15 @@
 #include "main.h"
 #include <stdarg.h>
 /**
- * 
- * 
  *
- *  
+ *
+ *
+ *
 */
 int char_counter(const char *str)
 {
 	int res = 0;
+
 	res += _strlen(str);
 	return (res);
 }
