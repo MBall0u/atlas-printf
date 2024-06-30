@@ -8,7 +8,7 @@
  *
  *  
 */
-int char_counter(char *str)
+int char_counter(const char *str)
 {
 	int res = 0;
 	res += _strlen(str);

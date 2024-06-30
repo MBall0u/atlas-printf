@@ -15,7 +15,7 @@
 */
 int _printf(const char *format, ...)
 {
-	char *temp_arg;
+	const char *temp_arg;
     char temp_char;
     int per_count = 0, res = 0, i;
 	void (*print_func)(va_list args);
@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 
 			if (format[i] == 's')
 			{
-				temp_arg = va_arg(copiedargs, char *);
+				temp_arg = va_arg(copiedargs, const char *);
 				res += (char_counter(temp_arg));
 			}
 			if (format[i] == '%' || format[i] == 'c')
@@ -61,7 +61,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	res += (_strlen(format) - (per_count * 2));
+	res += (_strlen(*format) - (per_count * 2));
 	va_end(args);
 	va_end(copiedargs);
 	return (res);
