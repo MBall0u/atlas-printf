@@ -17,7 +17,7 @@ int _printf(const char *format, ...)
 {
 	const char *temp_arg;
     char temp_char;
-    int per_count = 0, res = 0, i;
+    int per_count = 0, res = 0, i = 0;
 	void (*print_func)(va_list args);
 
 	va_list(args);
@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 			}
 			if (format[i] == '%' || format[i] == 'c')
 			{
-				temp_char = va_arg(copiedargs, unsigned char);
+				temp_char = va_arg(copiedargs, int);
 				res += 1;
 			}
 			
@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				return (1);
+				return (-1);
 			}
 		}
 		else

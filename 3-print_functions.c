@@ -9,7 +9,7 @@
 */
 void print_character(va_list args)
 {
-	char character = va_arg(args, unsigned char);
+	char character = va_arg(args, int);
 
 	putchar(character);	
 }
