@@ -19,7 +19,7 @@ int char_counter(const char *str)
  * 
  * 
 */
-int single_count(char c __ATTRIBUTE__ ((unused)))
+int single_count(char c __attribute__ ((unused)))
 {
 	return (1);
 }
