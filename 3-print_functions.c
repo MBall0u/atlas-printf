@@ -68,7 +68,7 @@ void print_decimal(va_list args)
 void print_integer(va_list args)
 {
 	int i = 0;
-	char *number = va_arg(va_list, char *);
+	char *number = va_arg(args, char *);
 	
 	while (number[i] != '\0')
 	{
