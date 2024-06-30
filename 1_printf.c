@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			if (format[i] == 's' || format[i] == 'c' || format[i] == '%')
 			{
 				per_count++;
-				res += char_func(format[i]);
+				res += char_func(format[i], copiedargs);
 			}
 			else if (format[i] == '\0')
 			{
@@ -59,7 +59,7 @@ int _printf(const char *format, ...)
  * @c: the inputted character from the formatted string
  * Return: the character counter res
 */
-int char_func(const char c)
+int char_func(const char c, va_list copiedargs)
 {
 	const char *temp_arg;
 	char temp_char;
