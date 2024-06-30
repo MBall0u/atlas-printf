@@ -66,7 +66,8 @@ int _printf(const char *format, ...)
 			}
 			else if (format[i] == '\0')
 			{
-				putchar('%');
+				i--;
+				putchar(format[i]);
 			}
 			else
 			{
