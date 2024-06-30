@@ -61,7 +61,7 @@ int _printf(const char *format, ...)
 		}
 		i++;
 	}
-	res += (_strlen(*format) - (per_count * 2));
+	res += (_strlen(format) - (per_count * 2));
 	va_end(args);
 	va_end(copiedargs);
 	return (res);
