@@ -5,19 +5,19 @@
 /**
  * print_character - prints a character
  * Description - initializes a pointer to a character, then prints it out
- * Return: Always 0 (success)
+ * Return: Void
 */
 void print_character(va_list args)
 {
 	char character = va_arg(args, int);
 
-	putchar(character);	
+	putchar(character);
 }
 /**
  * print_string - prints a string of characters
  * Description - initializes a pointer to the passed argument
  * and prints it out
- * Return: Always 0 (success)
+ * Return: Void
 */
 void print_string(va_list args)
 {
@@ -45,14 +45,14 @@ void print_string(va_list args)
 /**
  * print_percent - prints the % sign
  * Description - prints '%'
- * Return: Always 0 (success)
+ * Return: Void
 */
 void print_percent(va_list args __attribute__ ((unused)))
 {
-	putchar('%');	
+	putchar('%');
 }
 /**
- * print_decimal - initializes a pointer to an array of ints and a decimal point, and prints them.
+ * print_decimal - initializes a pointer to an array of ints and a decimal point
  * Description - prints a decimal number
  * Return: Void
 */
@@ -60,7 +60,7 @@ void print_decimal(va_list args)
 {
 	int n = 0;
 	char *dec = va_arg(args, char *);
-	
+
 	while (dec[n] != '\0' && dec[n] != '.')
 	{
 		putchar(dec[n]);
@@ -70,18 +70,18 @@ void print_decimal(va_list args)
 		{
 			putchar('.');
 		}
-	}	
+	}
 }
 /**
- * print_integer - 
- * Description - 
- * Return: Always 0 (success)
+ * print_integer - initializes pointer to array of ints 
+ * Description - prints an integer
+ * Return: Void
 */
 void print_integer(va_list args)
 {
 	int i = 0;
 	char *number = va_arg(args, char *);
-	
+
 	while (number[i] != '\0')
 	{
 		putchar(number[i]);
