@@ -38,9 +38,7 @@ int _printf(const char *format, ...)
 				{
 					temp_arg = va_arg(copiedargs, const char *);
 					if (temp_arg == NULL)
-					{
 						temp_arg = "(null)";
-					}
 					res += (char_counter(temp_arg));
 				}
 				if (format[i] == 'c')
@@ -49,20 +47,12 @@ int _printf(const char *format, ...)
 					res += single_count(temp_char);
 				}
 				if (format[i] == '%')
-				{
 					res += 1;
-				}
-
 				print_func = get_spec_func(format[i]);
-
 				if (print_func != NULL)
-				{
 					print_func(args);
-				}
 				else
-				{
 					return (-1);
-				}
 			}
 			else if (format[i] == '\0')
 			{
@@ -78,9 +68,7 @@ int _printf(const char *format, ...)
 			}
 		}
 		else
-		{
 			putchar(format[i]);
-		}
 		i++;
 	}
 	res += (_strlen(format) - (per_count * 2));
