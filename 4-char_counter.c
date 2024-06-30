@@ -8,12 +8,9 @@
  *
  *  
 */
-int char_counter(va_list copiedArgs)
+int char_counter(char *str)
 {
-	res = 0;
-	char *temp;
-		
-	temp = va_arg(copiedArgs, char *);
-	res += _strlen(temp);
-	c++
+	int res = 0;
+	res += _strlen(str);
+	return (res);
 }

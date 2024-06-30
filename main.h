@@ -20,5 +20,6 @@ void print_string(va_list args);
 void print_percent(va_list args);
 void print_decimal(va_list args);
 void print_integer(va_list args);
+int char_counter(char *str);
 #endif
 
