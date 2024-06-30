@@ -44,7 +44,6 @@ void print_percent(va_list args __attribute__ ((unused)))
  * Description - prints a decimal number
  * Return: Void
 */
-/***
 void print_decimal(va_list args)
 {
 	int n = 0;
@@ -67,7 +66,6 @@ void print_decimal(va_list args)
  * Description - 
  * Return: Always 0 (success)
 */
-/**
 void print_integer(va_list args)
 {
 	int i = 0;
