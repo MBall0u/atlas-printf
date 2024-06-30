@@ -14,3 +14,12 @@ int char_counter(const char *str)
 	res += _strlen(str);
 	return (res);
 }
+/**
+ * 
+ * 
+ * 
+*/
+int single_count(char c __ATTRIBUTE__ ((unused)))
+{
+	return (1);
+}
