@@ -47,20 +47,19 @@ void print_percent(va_list args __attribute__ ((unused)))
 void print_decimal(va_list args)
 {
 	int n = 0;
-	char *dec = va_arg(args, char *)
+	char *dec = va_arg(args, char *);
 	
 	while (dec[n] != '\0' && dec[n] != '.')
 	{
-		putchar(dec[i];)
+		putchar(dec[n]);
 		n++;
 	
 		if (dec[n] == '.')
 		{
-			putchar('.')
+			putchar('.');
 		}
 	}	
 }
-*/
 /**
  * print_integer - 
  * Description - 
@@ -69,7 +68,7 @@ void print_decimal(va_list args)
 void print_integer(va_list args)
 {
 	int i = 0;
-	char *number = va_arg(va_list, char *)
+	char *number = va_arg(va_list, char *);
 	
 	while (number[i] != '\0')
 	{
@@ -77,4 +76,3 @@ void print_integer(va_list args)
 		i++;
 	}
 }
-*/
