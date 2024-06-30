@@ -31,36 +31,45 @@ int _printf(const char *format, ...)
 		if (format[i] == '%')
 		{
 			i++;
-			per_count++;
-
-			if (format[i] == 's')
+			if (format[i] != 's' && format[i] == 'c' && format[i] == '%')
 			{
-				temp_arg = va_arg(copiedargs, const char *);
-				if (temp_arg == NULL)
+				per_count++;
+				if (format[i] == 's')
 				{
-					temp_arg = "(null)";
+					temp_arg = va_arg(copiedargs, const char *);
+					if (temp_arg == NULL)
+					{
+						temp_arg = "(null)";
+					}
+					res += (char_counter(temp_arg));
 				}
-				res += (char_counter(temp_arg));
-			}
-			if (format[i] == 'c')
-			{
-				temp_char = va_arg(copiedargs, int);
-				res += single_count(temp_char);
-			}
-			if (format[i] == '%')
-			{
-				res += 1;
-			}
-			
-			print_func = get_spec_func(format[i]);
+				if (format[i] == 'c')
+				{
+					temp_char = va_arg(copiedargs, int);
+					res += single_count(temp_char);
+				}
+				if (format[i] == '%')
+				{
+					res += 1;
+				}
 
-			if (print_func != NULL)
-			{
-				print_func(args);
+				print_func = get_spec_func(format[i]);
+
+				if (print_func != NULL)
+				{
+					print_func(args);
+				}
+				else
+				{
+					return (-1);
+				}
 			}
 			else
 			{
-				return (-1);
+				i--;
+        		putchar(format[i]);
+            	i++;
+            	putchar(format[i]);
 			}
 		}
 		else
