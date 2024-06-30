@@ -25,7 +25,6 @@ int _printf(const char *format, ...)
 	va_copy(copiedargs, args);
 	va_start(args, format);
 	va_start(copiedargs, format);
-
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
