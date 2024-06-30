@@ -17,8 +17,7 @@ int _printf(const char *format, ...)
 {
 	char *temp_arg;
     char temp_char;
-    char *temp_format = format;
-    int per_count = 0, res = 0;
+    int per_count = 0, res = 0, i;
 	void (*print_func)(va_list args);
 
 	va_list(args);
@@ -27,25 +26,25 @@ int _printf(const char *format, ...)
 	va_start(args, format);
 	va_start(copiedargs, format);
 
-	while (*format != '\0')
+	while (format[i] != '\0')
 	{
-		if (*format == '%')
+		if (format[i] == '%')
 		{
-			format++;
+			i++;
 			per_count++;
 
-			if (*format == 's')
+			if (format[i] == 's')
 			{
 				temp_arg = va_arg(copiedargs, char *);
 				res += (char_counter(temp_arg));
 			}
-			if (*format == '%' || *format == 'c')
+			if (format[i] == '%' || format[i] == 'c')
 			{
 				temp_char = va_arg(copiedargs, int);
 				res += 1;
 			}
 			
-			print_func = get_spec_func(*format);
+			print_func = get_spec_func(format[i]);
 
 			if (print_func != NULL)
 			{
@@ -58,11 +57,11 @@ int _printf(const char *format, ...)
 		}
 		else
 		{
-			putchar(*format);
+			putchar(format[i]);
 		}
-		format++;
+		i++;
 	}
-	res += (_strlen(temp_format) - (per_count * 2));
+	res += (_strlen(format) - (per_count * 2));
 	va_end(args);
 	va_end(copiedargs);
 	return (res);
