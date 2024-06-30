@@ -24,6 +24,7 @@ void print_integer(va_list args);
 int char_counter(const char *str);
 int _strlen(const char *s);
 int single_count(char c);
+int char_func(const char c);
 
 #endif
 

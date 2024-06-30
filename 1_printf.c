@@ -28,7 +28,7 @@ int _printf(const char *format, ...)
 			if (format[i] == 's' || format[i] == 'c' || format[i] == '%')
 			{
 				per_count++;
-				res += char_func(format[i])
+				res += char_func(format[i]);
 			}
 			else if (format[i] == '\0')
 			{
