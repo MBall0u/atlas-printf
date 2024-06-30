@@ -36,6 +36,10 @@ int _printf(const char *format, ...)
 			if (format[i] == 's')
 			{
 				temp_arg = va_arg(copiedargs, const char *);
+				if (temp_arg == NULL)
+				{
+					temp_arg = "(null)";
+				}
 				res += (char_counter(temp_arg));
 			}
 			if (format[i] == '%' || format[i] == 'c')

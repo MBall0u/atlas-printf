@@ -24,10 +24,22 @@ void print_string(va_list args)
 	int c = 0;
 	const char *str = va_arg(args, const char *);
 
-	while (str[c] != '\0')
+	if (str == NULL)
 	{
-		putchar(str[c]);
-		c++;
+		putchar('(');
+		putchar('n');
+		putchar('u');
+		putchar('l');
+		putchar('l');
+		putchar(')');
+	}
+	else
+	{
+		while (str[c] != '\0')
+		{
+			putchar(str[c]);
+			c++;
+		}
 	}
 }
 /**
