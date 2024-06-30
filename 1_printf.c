@@ -40,7 +40,7 @@ int _printf(const char *format, ...)
 			}
 			if (format[i] == '%' || format[i] == 'c')
 			{
-				temp_char = va_arg(copiedargs, int);
+				temp_char = va_arg(copiedargs, unsigned char);
 				res += 1;
 			}
 			

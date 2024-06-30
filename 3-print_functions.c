@@ -9,7 +9,7 @@
 */
 void print_character(va_list args)
 {
-	char character = va_arg(args, int);
+	char character = va_arg(args, unsigned char);
 
 	putchar(character);	
 }
@@ -22,7 +22,7 @@ void print_character(va_list args)
 void print_string(va_list args)
 {
 	int c = 0;
-	char *str = va_arg(args, char *);
+	const char *str = va_arg(args, const char *);
 
 	while (str[c] != '\0')
 	{
