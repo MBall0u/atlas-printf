@@ -19,6 +19,7 @@ int _printf(const char *format, ...)
     char temp_char;
     char *temp_format = format;
     int per_count = 0, res = 0;
+	void (*print_func)(va_list args);
 
 	va_list(args);
 	va_list(copiedargs);
@@ -44,7 +45,7 @@ int _printf(const char *format, ...)
 				res += 1;
 			}
 			
-			void (*print_func)(va_list args) = get_spec_func(*format);
+			print_func = get_spec_func(*format);
 
 			if (print_func != NULL)
 			{
@@ -54,7 +55,6 @@ int _printf(const char *format, ...)
 			{
 				return (1);
 			}
-			
 		}
 		else
 		{

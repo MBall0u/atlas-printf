@@ -1,3 +1,5 @@
+#include <stdarg.h>
+
 #ifndef MAIN_H
 #define MAIN_H
 
@@ -10,7 +12,7 @@
 typedef struct specifier
 {
 	char spec;
-	void (*f)(va_list);
+	void (*f)(va_list args);
 } spec_t;
 
 int _printf(const char *format, ...);
