@@ -89,7 +89,7 @@ int char_func(const char c, va_list copiedargs)
 
 	if (print_func != NULL)
 	{
-		print_func(args);
+		print_func(&args);
 	}
 	else
 	{
