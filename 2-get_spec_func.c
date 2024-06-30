@@ -17,6 +17,8 @@ void (*get_spec_func(char s))(va_list args)
 		{'c', print_character},
 		{'s', print_string},
 		{'%', print_percent},
+		{'d', print_decimal},
+		{'i', print_integer}
 	};
 	int i = 0;
 
