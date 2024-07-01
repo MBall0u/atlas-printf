@@ -68,7 +68,7 @@ void print_decimal(va_list args)
 
 	if (temp < 0)
 	{
-		temp *= 1
+		temp *= -1;
 		count++;
 		while (temp > 0)
 		{
