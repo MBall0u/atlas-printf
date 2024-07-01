@@ -38,10 +38,23 @@ int digi_count(int a)
 {
 	int count = 0;
 
-	while (a > 0)
+	if (a > 0)
 	{
-      a /= 10;
-      count++;
-    }
+		while (a > 0)
+		{
+      	a /= 10;
+      	count++;
+    	}
+	}
+	if (a < 0)
+	{
+		a *= -1;
+		count++;
+		while (a > 0)
+		{
+			a /= 10;
+			count++;
+    	}
+	}
 	return (count);
 }
