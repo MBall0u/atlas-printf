@@ -1,12 +1,14 @@
 .TH man 3 "01 July 2024" "1.0" "_printf man page"
 .SH NAME
-
+_printf - Recreation of the printf function with limited specifiers
 .SH SYNOPSIS
-
+#include "main.h"
 .SH DESCRIPTION
 
 .SH OPTIONS
 
 .SH SEE ALSO
 
-.SH AUTHOR
+.SH AUTHORS
+Michael Ballou
+Harrison Gearhart
