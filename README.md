@@ -30,4 +30,4 @@ Contains a helper function that returns the length of a string, which is then  u
 
 
 ## Authors
-Michael Ballou\nHarrison Gearhart
+Michael Ballou, Harrison Gearhart
