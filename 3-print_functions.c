@@ -69,6 +69,7 @@ void print_decimal(va_list args)
 	if (temp < 0)
 	{
 		temp *= -1;
+		dec *= -1;
 		count++;
 		while (temp > 0)
 		{
@@ -82,7 +83,6 @@ void print_decimal(va_list args)
         	tarray[n] = (temp + '0');
         	dec /= 10;
     	}
-		n += 2;
     	while (n < count)
 		{
     		putchar(tarray[n]);
