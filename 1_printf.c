@@ -126,7 +126,7 @@ int digi_func(const char c, va_list copiedargs, va_list args)
 
 	if (print_func != NULL)
 	{
-		res += print_func(args);
+		print_func(args);
 	}
 	else
 	{
