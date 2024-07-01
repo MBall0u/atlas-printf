@@ -30,6 +30,11 @@ int _printf(const char *format, ...)
 				per_count++;
 				res += char_func(format[i], copiedargs, args);
 			}
+			else if (format[i] == 'd' || format[i] == 'i')
+			{
+				per_count++;
+				res += digi_func(format[i], copiedargs, args);
+			}
 			else if (format[i] == '\0')
 			{
 				i--;
@@ -92,6 +97,31 @@ int char_func(const char c, va_list copiedargs, va_list args)
 	if (print_func != NULL)
 	{
 		print_func(args);
+	}
+	else
+	{
+		return (-1);
+	}
+	return (res);
+}
+/**
+ * 
+ * 
+ * 
+ * 
+ * 
+ * 
+*/
+int digi_func(const char c, va_list copiedargs, va_list args)
+{
+	int res = 0;
+	void (*print_func)(va_list args);
+
+	print_func = get_spec_func(c);
+
+	if (print_func != NULL)
+	{
+		res += print_func(args);
 	}
 	else
 	{

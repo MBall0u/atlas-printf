@@ -62,19 +62,25 @@ void print_percent(va_list args __attribute__ ((unused)))
 */
 void print_decimal(va_list args)
 {
-	int n = 0;
-	char *dec = va_arg(args, char *);
+	int dec = va_arg(args, int);
+    char tarray[50];
+    int n = 0, temp = dec, count = 0;
 
-	while (dec[n] != '\0' && dec[n] != '.')
-	{
-		putchar(dec[n]);
-		n++;
-
-		if (dec[n] == '.')
-		{
-			putchar('.');
-		}
-	}
+    while (temp > 0) {
+      temp /= 10;
+      count++;
+    }
+    for (n = count - 1; n >= 0; n--) {
+        temp = dec % 10;
+        tarray[n] = (temp + '0');
+        dec /= 10;
+    }
+    n++;
+    while (n < count) {
+      putchar(tarray[n]);
+      n++;
+    }
+    return (count);
 }
 /**
  * print_integer - initializes pointer to array of ints
@@ -84,12 +90,23 @@ void print_decimal(va_list args)
 */
 void print_integer(va_list args)
 {
-	int i = 0;
-	char *number = va_arg(args, char *);
+	int dec = va_arg(args, int);
+    char tarray[50];
+    int n = 0, temp = dec, count = 0;
 
-	while (number[i] != '\0')
-	{
-		putchar(number[i]);
-		i++;
-	}
+    while (temp > 0) {
+      temp /= 10;
+      count++;
+    }
+    for (n = count - 1; n >= 0; n--) {
+        temp = dec % 10;
+        tarray[n] = (temp + '0');
+        dec /= 10;
+    }
+    n++;
+    while (n < count) {
+      putchar(tarray[n]);
+      n++;
+    }
+    return (count);
 }
