@@ -4,9 +4,18 @@ _printf - Recreation of the printf function with limited specifiers
 .SH SYNOPSIS
 #include "main.h"
 .SH DESCRIPTION
-This version of printf uses variadic functions, structs, and multiple helper functions to print inputed characters, strings, percent signs, integers, and decimals. When executed successfully, it will also return the number of characters printed. If it fails, it will return a "-1" and "(null)".
-.SH Example
-
+This version of printf uses variadic functions, structs, and multiple helper functions to print inputed characters, strings, percent signs, integers, and decimals.
+When executed successfully, it will also return the number of characters printed. If it fails, it will return a "-1" and "(null)".
+.SH EXAMPLE
+Use one of the following key characters preceeded by the '%' symbol
+%c: Print a character
+%s: Print a string
+%%: Print a literal '%' sign
+%d: Print a decimal
+%i: Print an integer
+.SH RETURN VALUES
+When executed successfully, it will return the number of characters printed.
+If it fails, it will return a "-1" and "(null)".
 .SH SEE ALSO
 .I printf(3)
 .SH AUTHORS
