@@ -27,7 +27,7 @@ Contains a helper function that returns the length of a string, which is then  u
 
 ## Flowchart
 ```mermaid
-printf;
+graph TD;
   A-->B;
   A-->C;
   B-->D;
