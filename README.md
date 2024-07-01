@@ -28,7 +28,7 @@ Contains a helper function that returns the length of a string, which is then  u
 ## Flowchart
 ```mermaid
 graph TD;
-  1_printf.c-->B;
+  A-->B;
   A-->C;
   B-->D;
   C-->D;
