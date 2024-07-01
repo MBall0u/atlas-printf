@@ -66,20 +66,49 @@ void print_decimal(va_list args)
     char tarray[50];
     int n = 0, temp = dec, count = 0;
 
-    while (temp > 0) {
-      temp /= 10;
-      count++;
-    }
-    for (n = count - 1; n >= 0; n--) {
-        temp = dec % 10;
-        tarray[n] = (temp + '0');
-        dec /= 10;
-    }
-    n++;
-    while (n < count) {
-      putchar(tarray[n]);
-      n++;
-    }
+	if (temp < 0)
+	{
+		temp *= 1
+		count++;
+		while (temp > 0)
+		{
+			temp /= 10;
+			count++;
+    	}
+		tarray[0] = '-';
+		for (n = count - 1; n >= 1; n--)
+		{
+        	temp = dec % 10;
+        	tarray[n] = (temp + '0');
+        	dec /= 10;
+    	}
+		n += 2;
+    	while (n < count)
+		{
+    		putchar(tarray[n]);
+    		n++;
+    	}
+	}
+	else
+	{
+    	while (temp > 0)
+		{
+      		temp /= 10;
+      		count++;
+    	}
+    	for (n = count - 1; n >= 0; n--)
+		{
+        	temp = dec % 10;
+        	tarray[n] = (temp + '0');
+        	dec /= 10;
+    	}
+    	n++;
+    	while (n < count)
+		{
+      		putchar(tarray[n]);
+      		n++;
+    	}
+	}
 }
 /**
  * print_integer - initializes pointer to array of ints
