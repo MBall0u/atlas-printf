@@ -26,6 +26,7 @@ int _strlen(const char *s);
 int single_count(char c);
 int char_func(const char c, va_list copiedargs, va_list args);
 int digi_func(const char c, va_list copiedargs, va_list args);
+int digi_count(int a);
 
 #endif
 

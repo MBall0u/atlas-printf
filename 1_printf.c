@@ -105,17 +105,22 @@ int char_func(const char c, va_list copiedargs, va_list args)
 	return (res);
 }
 /**
- * 
- * 
- * 
- * 
- * 
- * 
+ * digi_func - the function counting
+ * and printing the d and i cases
+ * Description - see above
+ * @c: the formatted string character being passed
+ * through to find the correct print function
+ * @copiedargs: the copied args list being passed to the counter
+ * @args: the original args list being passed to the print functions
+ * Return: res (success)
 */
 int digi_func(const char c, va_list copiedargs, va_list args)
 {
-	int res = 0;
+	int res = 0, temp_int;
 	void (*print_func)(va_list args);
+
+	temp_int = va_arg(copiedargs, int);
+	res += digi_count(temp_int);
 
 	print_func = get_spec_func(c);
 

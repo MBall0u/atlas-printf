@@ -80,7 +80,6 @@ void print_decimal(va_list args)
       putchar(tarray[n]);
       n++;
     }
-    return (count);
 }
 /**
  * print_integer - initializes pointer to array of ints
@@ -108,5 +107,4 @@ void print_integer(va_list args)
       putchar(tarray[n]);
       n++;
     }
-    return (count);
 }

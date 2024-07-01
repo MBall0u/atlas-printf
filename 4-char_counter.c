@@ -27,3 +27,21 @@ int single_count(char c __attribute__ ((unused)))
 {
 	return (1);
 }
+/**
+ * digi_count - counting how many characters
+ * there are in an int
+ * Description - see above
+ * @a: the inputted int
+ * Return: count (success)
+*/
+int digi_count(int a)
+{
+	int count = 0;
+
+	while (a > 0)
+	{
+      a /= 10;
+      count++;
+    }
+	return (count);
+}
