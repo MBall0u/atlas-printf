@@ -1,2 +1,7 @@
-# atlas-printf
-This repository is a shared repository and is going to be used for the printf project in T1
+## Atlas-printf
+
+# Synopsis
+
+This is a simple version of the printf function found in the standard library of the C programming language. 
+Available Conversion specifiers:
+
