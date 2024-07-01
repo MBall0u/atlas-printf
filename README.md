@@ -26,3 +26,9 @@ Uses 5-strlen.c to calculate the total number of characters in the string.
 Contains a helper function that returns the length of a string, which is then  used in 4-char_counter.c
 
 ## Flowchart
+
+
+
+## Authors
+Michael Ballou
+Harrison Gearhart
