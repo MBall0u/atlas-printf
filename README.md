@@ -35,8 +35,13 @@ graph TD;
     B --> C["format[]" args, copiedargs]
     B --> D[initialize args lists and variables]
     D --> E{"Does format [i]" == '\0'}
-    E --> |Yes|F(Return total character count on success)
+    E --> |Yes|F["Result = total character count - (percent counter x 2)"]
+    F --> Z(Return Result)
     E --> |No|G{"Format[i]" == % ?}
+    G --> |No|H[print character, iterates forward]
+    H --> E
+    G --> |Yes|Y[iterates forward]
+    Y --> I{"Does format[i]" == %s, %c, %% ?}
 ```
 
 ## Authors
