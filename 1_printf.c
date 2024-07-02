@@ -42,9 +42,8 @@ int _printf(const char *format, ...)
 			}
 			else
 			{
-				i--;
-				putchar(format[i]);
-				i++;
+	
+				putchar(format[i - 1]);
 				putchar(format[i]);
 			}
 		}
