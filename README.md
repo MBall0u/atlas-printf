@@ -47,6 +47,8 @@ graph TD;
 	I --> |No|K{"Does format[i]" == %d or %i ?}
     K --> |Yes|L[Add 1 to percent counter, call digi_func to print and count given arguments, return char count, and iterate foward]
     L --> E
+	K --> |No|M[Print previous character and current character, then iterates forward]
+    M --> E
 ```
 
 ## Authors
