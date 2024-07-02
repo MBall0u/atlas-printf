@@ -42,6 +42,8 @@ graph TD;
     H --> E
     G --> |Yes|Y[iterates forward]
     Y --> I{"Does format[i]" == %s, %c, %% ?}
+	I --> |Yes|J[Add 1 to percent counter, call char_func to print and count given arguments, return char count, and iterate forward]
+    J --> E
 ```
 
 ## Authors
