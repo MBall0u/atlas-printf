@@ -24,7 +24,10 @@ Contains the helper functions that print the data based off the corresponding fo
 Uses 5-strlen.c to calculate the total number of characters in the string.
 ### 5-strlen.c
 Contains a helper function that returns the length of a string, which is then  used in 4-char_counter.c
-
+### main.h
+Header file containing all prototype functions and the specifier struct
+### man-3_printf
+Man page
 ## Flowchart
 ```mermaid
 graph TD;
