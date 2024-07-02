@@ -40,7 +40,7 @@ graph TD;
     E --> |No|G{"Format[i]" == % ?}
     G --> |No|H[Print character, iterates forward]
     H --> E
-    G --> |Yes|Y[iterates forward]
+    G --> |Yes|Y[Iterates forward]
     Y --> I{"Does format[i]" == %s, %c, %% ?}
 	I --> |Yes|J[Add 1 to percent counter, call char_func to print and count given arguments, return char count, and iterate forward]
     J --> E
