@@ -10,7 +10,7 @@ When executed successfully, it will also return the number of characters printed
 Use one of the following key characters preceeded by the '%' symbol
 %c: Print a character
 %s: Print a string
-%%: Print a literal '%' sign
+%%: Print a '%' sign
 %d: Print a decimal
 %i: Print an integer
 .SH RETURN VALUES
