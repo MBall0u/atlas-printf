@@ -125,7 +125,7 @@ void print_integer(va_list args)
     int n = 0, temp = dec, count = 0;
 	
 	if (dec == 0)
-		return(1);
+		putchar(temp + '0');
 	if (temp < 0)
 	{
 		temp *= -1;
