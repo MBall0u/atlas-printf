@@ -63,8 +63,8 @@ void print_percent(va_list args __attribute__ ((unused)))
 void print_decimal(va_list args)
 {
 	int dec = va_arg(args, int);
-    char tarray[50];
-    int n = 0, temp = dec, count = 0;
+	char tarray[50];
+	int n = 0, temp = dec, count = 0;
 
 	if (dec == 0)
 		putchar(temp + '0');
@@ -77,19 +77,19 @@ void print_decimal(va_list args)
 		{
 			temp /= 10;
 			count++;
-    	}
+		}
 		tarray[0] = '-';
 		for (n = count - 1; n >= 1; n--)
 		{
-        	temp = dec % 10;
-        	tarray[n] = (temp + '0');
-        	dec /= 10;
-    	}
-    	while (n < count)
+			temp = dec % 10;
+			tarray[n] = (temp + '0');
+			dec /= 10;
+		}
+		while (n < count)
 		{
-    		putchar(tarray[n]);
-    		n++;
-    	}
+			putchar(tarray[n]);
+			n++;
+		}
 	}
 	else
 	{
@@ -105,9 +105,9 @@ void print_decimal(va_list args)
 void print_integer(va_list args)
 {
 	int dec = va_arg(args, int);
-    char tarray[50];
-    int n = 0, temp = dec, count = 0;
-	
+	char tarray[50];
+	int n = 0, temp = dec, count = 0;
+
 	if (dec == 0)
 		putchar(temp + '0');
 	if (temp < 0)
@@ -119,19 +119,19 @@ void print_integer(va_list args)
 		{
 			temp /= 10;
 			count++;
-    	}
+		}
 		tarray[0] = '-';
 		for (n = count - 1; n >= 1; n--)
 		{
-        	temp = dec % 10;
-        	tarray[n] = (temp + '0');
-        	dec /= 10;
-    	}
-    	while (n < count)
+			temp = dec % 10;
+			tarray[n] = (temp + '0');
+			dec /= 10;
+		}
+		while (n < count)
 		{
-    		putchar(tarray[n]);
-    		n++;
-    	}
+			putchar(tarray[n]);
+			n++;
+		}
 	}
 	else
 	{
