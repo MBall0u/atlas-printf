@@ -38,6 +38,8 @@ int digi_count(int a)
 {
 	int count = 0;
 
+	if (a == 0)
+		return (1);
 	if (a < 0)
 	{
 		a *= -1;
