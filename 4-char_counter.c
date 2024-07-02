@@ -55,3 +55,33 @@ int digi_count(int a)
 	}
 	return (count);
 }
+/**
+ * positive_num - uses an integer input from the d and i case
+ * to print the number off
+ * Description - see above
+ * @a: the derived variable
+ * Return: Always 0 (success)
+*/
+void positive_num(int a)
+{
+	char tarray[50];
+    int n = 0, temp = a, count = 0;
+
+	while (temp > 0)
+	{
+		temp /= 10;
+		count++;
+	}
+	for (n = count - 1; n >= 0; n--)
+	{
+		temp = a % 10;
+		tarray[n] = (temp + '0');
+		a /= 10;
+	}
+	n++;
+	while (n < count)
+	{
+		putchar(tarray[n]);
+		n++;
+	}
+}

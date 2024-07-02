@@ -93,23 +93,7 @@ void print_decimal(va_list args)
 	}
 	else
 	{
-    	while (temp > 0)
-		{
-      		temp /= 10;
-      		count++;
-    	}
-    	for (n = count - 1; n >= 0; n--)
-		{
-        	temp = dec % 10;
-        	tarray[n] = (temp + '0');
-        	dec /= 10;
-    	}
-    	n++;
-    	while (n < count)
-		{
-      		putchar(tarray[n]);
-      		n++;
-    	}
+		positive_num(dec);
 	}
 }
 /**
@@ -151,22 +135,6 @@ void print_integer(va_list args)
 	}
 	else
 	{
-    	while (temp > 0)
-		{
-      		temp /= 10;
-      		count++;
-    	}
-    	for (n = count - 1; n >= 0; n--)
-		{
-        	temp = dec % 10;
-        	tarray[n] = (temp + '0');
-        	dec /= 10;
-    	}
-    	n++;
-    	while (n < count)
-		{
-      		putchar(tarray[n]);
-      		n++;
-    	}
+		positive_num(dec);
 	}
 }
