@@ -33,12 +33,12 @@ Man page
 graph TD;
 	A(Start _printf) -->B(Formatted string, variable # of Args)
     B --> C["format[]" args, copiedargs]
-    B --> D[initialize args lists and variables]
+    B --> D[Initialize args lists and variables]
     D --> E{"Does format [i]" == '\0'}
     E --> |Yes|F["Result = total character count - (percent counter x 2)"]
     F --> Z(Return Result)
     E --> |No|G{"Format[i]" == % ?}
-    G --> |No|H[print character, iterates forward]
+    G --> |No|H[Print character, iterates forward]
     H --> E
     G --> |Yes|Y[iterates forward]
     Y --> I{"Does format[i]" == %s, %c, %% ?}
