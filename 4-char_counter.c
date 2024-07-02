@@ -45,13 +45,10 @@ int digi_count(int a)
 		a *= -1;
 		count++;
 	}
-	if (a > 0)
+	while (a > 0)
 	{
-		while (a > 0)
-		{
-      	a /= 10;
-      	count++;
-    	}
+		a /= 10;
+		count++;
 	}
 	return (count);
 }
@@ -65,7 +62,7 @@ int digi_count(int a)
 void positive_num(int a)
 {
 	char tarray[50];
-    int n = 0, temp = a, count = 0;
+	int n = 0, temp = a, count = 0;
 
 	while (temp > 0)
 	{
