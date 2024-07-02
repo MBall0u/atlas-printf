@@ -15,7 +15,7 @@ Use one of the following key characters preceeded by the '%' symbol
 %i: Print an integer
 .SH RETURN VALUES
 When executed successfully, it will return the number of characters printed.
-If it fails, it will return a "-1" and "(null)".
+If it fails, it will return a "-1".
 .SH SEE ALSO
 .I printf(3)
 .SH AUTHORS
