@@ -28,6 +28,7 @@ int char_func(const char c, va_list copiedargs, va_list args);
 int digi_func(const char c, va_list copiedargs, va_list args);
 int digi_count(int a);
 void positive_num(int a);
+void print_binary(va_list args);
 
 #endif
 

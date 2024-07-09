@@ -18,11 +18,12 @@ void (*get_spec_func(char s))(va_list args)
 		{'s', print_string},
 		{'%', print_percent},
 		{'d', print_decimal},
-		{'i', print_integer}
+		{'i', print_integer},
+		{'b', print_binary}
 	};
 	int i = 0;
 
-	while (i < 6)
+	while (i < 7)
 	{
 		if (specs[i].spec == s)
 		{

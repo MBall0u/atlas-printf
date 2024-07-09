@@ -35,6 +35,11 @@ int _printf(const char *format, ...)
 				per_count++;
 				res += digi_func(format[i], copiedargs, args);
 			}
+			else if (format[i] == 'b')
+			{
+				per_count++;
+				print_binary(args);
+			}
 			else if (format[i] == '\0')
 			{
 				i--;
